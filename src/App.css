@@ -62,7 +62,7 @@ div.section {
   color: #17252a !important;
 }
 .text-white {
-  color: #feffff;
+  color: #feffff !important;
 }
 #search-div {
   margin: 20rem 0rem 0 11rem;
@@ -73,4 +73,39 @@ div.section {
 }
 #popular-tracks {
   overflow-x: hidden;
+}
+#popular-artists {
+  background-color: #17252a;
+}
+#popular-albums {
+  background-color: #3aafa9;
+}
+#popular-artists Link {
+  text-decoration: none !important;
+  color: #feffff !important;
+}
+Link.text-white:hover {
+  color: #cde1e1 !important;
+}
+#image-left-section {
+  margin: 7rem 0rem 0rem 10rem;
+  background-color: #2b7a78;
+}
+
+#image-left-section div ul li {
+  list-style-type: none !important;
+  padding: 5px 0;
+}
+
+footer{
+  background-color: #17252a;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+footer a {
+  color: #feffff !important;
+}
+footer span a {
+padding: 0 0.5em;
 }
