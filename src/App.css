@@ -39,7 +39,14 @@ h1 {
     "slnt" 0;
     font-size: 3.5rem;
 }
-
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
 div.light-blue {
   background-color: #3aafa9;
 }
@@ -50,7 +57,7 @@ div.darkest-blue {
   background-color: #17252a;
 }
 div.section {
-  padding: 5rem 5rem;
+  padding: 1rem 1rem;
 }
 #navbar {
   position: fixed;
@@ -64,9 +71,11 @@ div.section {
 .text-white {
   color: #feffff !important;
 }
-#search-div {
-  margin: 20rem 0rem 0 11rem;
-  height: 100vh;
+@media (min-width: 992px) {
+  #search-div {
+    margin: 20rem 0rem 0 11rem;
+    height: 100vh;
+  }  
 }
 .img-box {
   aspect-ratio: 1;
@@ -99,7 +108,7 @@ Link.text-white:hover {
 
 footer{
   background-color: #17252a;
-  position: fixed;
+  position: relative;
   width: 100%;
   bottom: 0;
 }

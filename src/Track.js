@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Section } from './Section';
 import {useParams} from 'react-router-dom';
 import { ImageLeftSection } from './ImageLeftSection';
 const Track = (props) => {
   const [track, setTrack] = useState({})
   let {trackId} = useParams();
   const getTrack = () => {
-    fetch(`https://api.deezer.com/track/${trackId}`).then((response) => {
+    fetch(`http://localhost:5000/api/track/${trackId}`).then((response) => {
       if (response.ok) {
         return response.json();
       }
@@ -14,6 +13,7 @@ const Track = (props) => {
     }).then((results) => {
       console.log(results);
       const trackObj = {
+        type: "track",
         name : results.title,
         artist: results.artist.name,
         releaseDate: results.release_date,
@@ -33,7 +33,7 @@ const Track = (props) => {
   return (
     <div className='container-fluid'>
       <div className='row dark-blue'>
-        <ImageLeftSection id='image-left-section' track={track} />
+        <ImageLeftSection id='image-left-section' item={track} />
       </div>
     </div>
 
