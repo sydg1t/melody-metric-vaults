@@ -1,5 +1,3 @@
-
-
 .inter {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -8,6 +6,7 @@
   font-variation-settings:
     "slnt" 0;
 }
+
 .jockey-one-regular {
   font-family: "Jockey One", sans-serif;
   font-weight: 400;
@@ -21,84 +20,117 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
 h2 {
-  font-family:"Inter", Helvetica, sans-serif;
+  font-family: "Inter", Helvetica, sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
   font-variation-settings:
     "slnt" 0;
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
+
 h1 {
-  font-family:"Inter", Helvetica, sans-serif;
+  font-family: "Inter", Helvetica, sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
   font-variation-settings:
     "slnt" 0;
-    font-size: 3.5rem;
+  font-size: 3.5rem;
 }
+
 @media (max-width: 576px) {
   h1 {
     font-size: 2rem;
   }
+
   h2 {
     font-size: 1.5rem;
   }
 }
+
 div.light-blue {
   background-color: #3aafa9;
 }
+
 div.dark-blue {
   background-color: #2b7a78;
 }
+
 div.darkest-blue {
   background-color: #17252a;
 }
+
 div.section {
   padding: 1rem 1rem;
 }
+
 #navbar {
   position: fixed;
   top: 0;
-  background-color: rgb(0,0,0,0);
-  
+  background-color: rgb(0, 0, 0, 0);
+
 }
+
 .text-black {
   color: #17252a !important;
 }
+
 .text-white {
   color: #feffff !important;
 }
+
 @media (min-width: 992px) {
   #search-div {
-    margin: 20rem 0rem 0 11rem;
+    margin: 10rem 0rem 0 11rem;
     height: 100vh;
-  }  
+  }
 }
+
+@media (max-width: 992px) {
+  #search-div {
+    margin: 5rem 0rem 5rem 0rem;
+  }
+}
+
 .img-box {
   aspect-ratio: 1;
 }
+
 #popular-tracks {
   overflow-x: hidden;
 }
+
 #popular-artists {
   background-color: #17252a;
 }
+
 #popular-albums {
   background-color: #3aafa9;
 }
+
 #popular-artists Link {
   text-decoration: none !important;
   color: #feffff !important;
 }
+
 Link.text-white:hover {
   color: #cde1e1 !important;
 }
+
+
+
 #image-left-section {
-  margin: 7rem 0rem 0rem 10rem;
-  background-color: #2b7a78;
+ margin: 5rem 0 0 0.01rem;
+}
+
+@media (min-width: 992px) {
+  #image-left-section {
+    margin: 7rem 0rem 0rem 10rem;
+    background-color: #2b7a78;
+  }
 }
 
 #image-left-section div ul li {
@@ -106,15 +138,51 @@ Link.text-white:hover {
   padding: 5px 0;
 }
 
-footer{
+footer {
   background-color: #17252a;
   position: relative;
   width: 100%;
   bottom: 0;
 }
+
 footer a {
   color: #feffff !important;
 }
+
 footer span a {
-padding: 0 0.5em;
+  padding: 0 0.5em;
+}
+
+input {
+  background-color: #d9d9d9;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.no-focus:focus {
+  outline: none !important;
+}
+
+.search-width div {
+  width: 100%;
+  background-color: #d9d9d9 !important;
+}
+
+#search-results {
+  height: 50vh;
+  overflow-y: scroll;
+}
+
+#search-results ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#small-navbar {
+  background-color: #2b7a78;
+}
+#search-results li {
+  padding: 0.5rem;
 }

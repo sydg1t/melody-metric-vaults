@@ -97,3 +97,13 @@ app.get('/api/album/:albumId', async (req, res) => {
       res.status(500).send('Error fetching track data');
     }
 });
+app.get('/api/search', async (req, res) => { 
+    const query = req.query.q;
+    try {
+        const deezerResponse = await axios.get(`https://api.deezer.com/search?q=${query}`);
+        res.send(deezerResponse.data);
+        console.log(deezerResponse.data);
+    } catch (error) {
+        res.status(500).send('Error fetching search results');
+    }
+});

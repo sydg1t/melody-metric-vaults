@@ -14,9 +14,10 @@ import {
 
 const NavBar = function () {
   return (
-    <nav id='navbar'>
+    <nav id='navbar' className='w-100'>
       <Link className='text-decoration-none' id='home-link' to="/">
-        <h2 className='text-start font-weight-bold text-white ps-3 d-none d-md-block'> <b>Melody  <br /> <span className='text-black'>Metric </span><br />Vaults</b></h2>
+        <h2 id='large-navbar' className='text-start font-weight-bold text-white ps-3 d-none d-lg-block'> <b>Melody  <br /> <span className='text-black'>Metric </span><br />Vaults</b></h2>
+        <h1 id='small-navbar'className='text-start font-weight-bold text-white ps-3 d-lg-none d-block'> <b>Melody <span className='text-black'>Metric </span>Vaults</b></h1>
       </Link>
     </nav>
   )

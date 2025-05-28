@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Section } from './Section';
-
+import { Search } from './Search';
 
 
 
@@ -82,13 +82,9 @@ const Home = () => {
   return (
     <div className='container-fluid'>
       <div className="row">
-        <div id='search-div' className='col-md-8 light-blue align-items-center'>
-          <h1 className='mb-5 d-xs-none'>Analytics for 
-            <span className='text-white'> Songs</span> 
-            <br /> and <span className='text-white'>Artists</span></h1>
-          <p className='fs-1 my-5'>Search a song or artist <br />for stream data</p>
-          <input className='w-100 py-3 mb-2 px-2 mt-3 fs-2' placeholder='Search'></input>
-        </div>
+          <Search/>
+          
+        
         <Section id='popular-tracks' title='Most Popular Tracks' array={tracks}></Section>
         <Section id='popular-artists' title='Most Popular Artists' array={artists}></Section>
         <Section id='popular-albums' title='Most Popular Albums' array={albums}></Section>

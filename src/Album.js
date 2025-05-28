@@ -4,7 +4,6 @@ import { ImageLeftSection } from './ImageLeftSection';
 const Album = (props) => {
     const [album, setAlbum] = useState();
     const {albumId} = useParams();
-     console.log(albumId);
     const getAlbum = () => {
          fetch(`http://localhost:5000/api/album/${albumId}`).then((response) => {
           if (response.ok) {

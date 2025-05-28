@@ -2,7 +2,7 @@ const ImageLeftSection = (props) => {
 
 
   return (
-    <div id={props.id} className="row py-5">
+    <div id={props.id} className="row py-lg-5">
       <div className="col-4 img" style={{
         backgroundImage: `url(${props.item.imageURL})`,
         backgroundRepeat: 'no-repeat',
