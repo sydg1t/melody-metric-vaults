@@ -1,9 +1,9 @@
-
 const express = require('express')
 const app = express()
 const cors = require('cors')
 const axios = require('axios')
-const port = 5000
+const path = require('path');
+const port = process.env.PORT || 5000;
 let trackArr, albumArr, artistArr, arraysObj, trackObj;
 
 app.use(cors())
@@ -106,4 +106,12 @@ app.get('/api/search', async (req, res) => {
     } catch (error) {
         res.status(500).send('Error fetching search results');
     }
+});
+
+// Serve static files from React
+app.use(express.static(path.join(__dirname, '../build')));
+
+// Serve React for any unknown route
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build', 'index.html'));
 });

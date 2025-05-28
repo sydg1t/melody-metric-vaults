@@ -15,7 +15,7 @@ const Home = () => {
   
   const fillArrays = () => {
     
-    fetch(`http://localhost:5000/api`).then((response) => {
+    fetch(`/api`).then((response) => {
       if (response.ok) {
         return response.json();
       }

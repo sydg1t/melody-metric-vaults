@@ -14,7 +14,7 @@ const Search = () => {
 
         const delayDebounce = setTimeout(() => {
             setLoading(true);
-            fetch(`http://localhost:5000/api/search?q=${encodeURIComponent(query)}`)
+            fetch(`/api/search?q=${encodeURIComponent(query)}`)
                 .then(res => res.json())
                 .then(data => setResults(data.data || []))
                 .catch(err => console.error('Error during search:', err))
