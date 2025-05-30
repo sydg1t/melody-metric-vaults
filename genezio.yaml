@@ -1,0 +1,22 @@
+backend:
+    functions:
+        - entry: server.js
+          handler: handler
+          name: function-express
+          path: .
+          type: httpServer
+    language:
+        name: js
+    path: ./backend
+frontend:
+    path: ./src/
+    publish: build
+    scripts:
+        build:
+            - npm run build
+        deploy:
+            - npm install
+    subdomain: melody-metric-vaults
+name: melody-metric-vaults
+region: us-east-1
+yamlVersion: 2
