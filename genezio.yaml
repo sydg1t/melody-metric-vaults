@@ -9,7 +9,7 @@ backend:
         name: js
     path: ./backend
 frontend:
-    path: ./src/
+    path: ./
     publish: build
     scripts:
         build:
